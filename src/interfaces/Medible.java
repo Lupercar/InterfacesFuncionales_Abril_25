@@ -1,5 +1,7 @@
 package interfaces;
 
+//interfaz funcional
+@FunctionalInterface
 public interface Medible {
 	// Hacemos un enumerado para unidades de medida
 	enum Unidad {
