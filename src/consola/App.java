@@ -1,5 +1,7 @@
 package consola;
 
+import interfaces.Medible;
+import interfaces.Medible.Unidad;
 import interfaces.Pesable;
 
 public class App {
@@ -23,5 +25,22 @@ public class App {
 							};
 		
 		Pesable p3 = () -> 0.0; //una linea de codigo se entiende que es el return
+		
+		Medible m1 = (u,v) -> {
+			double valor = 0.0; 
+			switch(u){
+			case M: 
+				valor = v; 
+				break;
+			case CM:
+				valor = v*100; 
+				break; 
+			}
+			return valor; 
+		}; 
+		
+		//uso el método, nos devuelve el valor lo muestro por pantalla
+		System.out.println(m1.getUnidad(Unidad.CM, 1));
+		
 	}
 }
